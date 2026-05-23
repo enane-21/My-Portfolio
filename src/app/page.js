@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Mail, Phone, MapPin, Briefcase, GraduationCap } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import Skills from "@/components/Skills";
@@ -65,32 +66,49 @@ export default function Home() {
       <ThemeToggle />
 
       {/* HERO */}
-      <header className="max-w-5xl mx-auto px-6 py-24 flex flex-col gap-4">
-        <span className="text-emerald-500 font-mono">Hi, my name is</span>
-        <h1 className="text-5xl font-bold text-white tracking-tight">
-          Mengistu Animut Bogale
-        </h1>
-        <h2 className="text-2xl md:text-3xl text-slate-400 font-semibold">
-          WEB Developer
-        </h2>
-        <p className="text-slate-400 max-w-2xl leading-relaxed">
-          Computer Science graduate from Debre Tabor University (CGPA: 3.8).
-          Dedicated to building scalable, efficient, and user-centric systems
-          using modern JavaScript environments.
-        </p>
-        <div className="flex flex-wrap gap-4 pt-4">
-          <a
-            href="#projects"
-            className="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3 rounded-lg transition-colors"
-          >
-            View My Work
-          </a>
-          <a
-            href="#contact"
-            className="border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-lg transition-colors flex items-center gap-2"
-          >
-            <Mail size={18} /> Contact Me
-          </a>
+      <header className="max-w-5xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-12">
+        {/* Photo */}
+        <div className="shrink-0">
+          <div className="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-emerald-500 shadow-[0_0_32px_rgba(52,211,153,0.3)]">
+            <Image
+              src="/my-photo.jpg"
+              alt="Mengistu Animut Bogale"
+              width={224}
+              height={224}
+              className="object-cover w-full h-full"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Text */}
+        <div className="flex flex-col gap-4 text-center md:text-left">
+          <span className="text-emerald-500 font-mono">Hi, my name is</span>
+          <h1 className="text-5xl font-bold text-white tracking-tight">
+            Mengistu Animut Bogale
+          </h1>
+          <h2 className="text-2xl md:text-3xl text-slate-400 font-semibold">
+            WEB Developer
+          </h2>
+          <p className="text-slate-400 max-w-2xl leading-relaxed">
+            Computer Science graduate from Debre Tabor University (CGPA: 3.8).
+            Dedicated to building scalable, efficient, and user-centric systems
+            using modern JavaScript environments.
+          </p>
+          <div className="flex flex-wrap gap-4 pt-2 justify-center md:justify-start">
+            <a
+              href="#projects"
+              className="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3 rounded-lg transition-colors"
+            >
+              View My Work
+            </a>
+            <a
+              href="#contact"
+              className="border border-slate-700 hover:border-slate-500 px-6 py-3 rounded-lg transition-colors flex items-center gap-2"
+            >
+              <Mail size={18} /> Contact Me
+            </a>
+          </div>
         </div>
       </header>
 
