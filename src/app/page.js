@@ -8,6 +8,7 @@ import SocialLinks from "@/components/SocialLinks";
 import TypingHero from "@/components/TypingHero";
 import StatsBar from "@/components/StatsBar";
 import Roadmap from "@/components/Roadmap";
+import Timeline from "@/components/Timeline";
 
 const PROJECTS = [
   {
@@ -139,6 +140,9 @@ export default function Home() {
 
       {/* ROADMAP */}
       <Roadmap />
+
+      {/* TIMELINE */}
+      <Timeline />
 
       {/* PROJECTS */}
       <section
